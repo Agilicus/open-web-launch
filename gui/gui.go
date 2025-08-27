@@ -1,6 +1,5 @@
 package gui
 
-
 import (
 	"image"
 	"image/color"

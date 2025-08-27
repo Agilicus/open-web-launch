@@ -10,6 +10,7 @@ import (
 
 	"github.com/aarzilli/nucular"
 	"github.com/aarzilli/nucular/label"
+	"github.com/aarzilli/nucular/font"
 	"github.com/aarzilli/nucular/style"
 	"github.com/rocketsoftware/open-web-launch/utils"
 	"github.com/rocketsoftware/open-web-launch/utils/log"
@@ -66,7 +67,8 @@ func (gui *GUI) makeStyle() *style.Style {
 	if err != nil {
 		log.Printf("warning: %v\n", err)
 	}
-	style.Font = myFont
+	wrappedFont := font.Face{Face: myFont}
+	style.Font = wrappedFont
 	return style
 }
 
